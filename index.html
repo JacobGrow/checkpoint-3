@@ -9,10 +9,39 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/style.css" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>TaskMaster</title>
   </head>
 
   <body>
+    <header class="container-fluid">
+      <div class="row m-3">
+        <div class="col text-center">
+          <h1>Task Commander</h1>
+
+          </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form onsubmit="app.listController.newList(event)">
+            <input type="text" name="title" id="title" aria-describedby="title"
+            placeholder="Title..." required>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+          </form>
+         </div>
+      </div>
+
+      <div class="row ml-4 mt-3" id="lists">
+         
+        </div>
+    </main>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+      </div>
+    </footer>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
