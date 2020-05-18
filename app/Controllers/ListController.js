@@ -33,15 +33,23 @@ export default class ListController {
   
   deleteList(id){
     _listService.deleteList(id);
+    _drawLists()
   }
-  newItem(event, listId){
-    event.preventDefault();
-    let formData = event.target
-    let rawItem = {
-      item: formData.item.value
+  addItem(e, listId){
+    e.preventDefault();
+    let item = e.target.item.value
+    try {
+      _listService.addItem(item, listId)
     }
-    formData.reset();
-    _listService.addItem(rawItem)
+    catch (error){
+      alert(error.message)
+    }
+    _drawLists();
+  }
+
+  deleteItem(listId, index){
+    _listService.deleteItem(listId, index)
+    _drawLists();
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems

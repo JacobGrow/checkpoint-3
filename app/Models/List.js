@@ -19,9 +19,8 @@ export default class List {
     <div class="col-3">
     <div class="card shadow">
         <div class="card-body d-flex flex-column">
-            <i class="fas fa-times text-danger align-self-end action"
-                onclick="app.listController.deleteList('${this.id}')"></i>
-            <h4 class="card-title">Name: ${this.title}</h4>
+           <i class="fa fa-times text-danger align-self-end action" onclick="app.listController.deleteList('${this.id}')"></i>
+            <h4 class="card-title border-bottom">${this.title}</h4>
             <ul class="pl-3">
                 ${this.ItemsTemplate}
             </ul>

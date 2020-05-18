@@ -10,11 +10,12 @@ class ListService {
   newList(rawList){
     let list = new List(rawList)
     _store.State.lists.push(list)
-    _store.saveState()
+    _store.saveState();
   }
 
   deleteList(id){
-    _store.State.lists = _store.State.lists.filter(l => l.id != id)
+    if (confirm("You are deleting this list.")){
+      _store.State.lists = _store.State.lists.filter(l => l.id != id)}
     _store.saveState();
   }
   addItem(item, listId){
@@ -27,8 +28,10 @@ class ListService {
   }
 
   deleteItem(listId, index){
-    let list = _store.State.lists.find(l => l.id == list.id)
+   if (confirm("You are deleting this item")){
+    let list = _store.State.lists.find(l => l.id == listId)
     list.items.splice(index, 1)
+  }
     _store.saveState();
   }
 }

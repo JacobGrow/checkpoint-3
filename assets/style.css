@@ -1,3 +1,14 @@
-body{
-  background-color: antiquewhite;
+body {
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.action {
+  cursor: pointer
 }
