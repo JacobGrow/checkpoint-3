@@ -10,36 +10,49 @@
     />
     <link rel="stylesheet" href="assets/style.css" />
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>TaskMaster</title>
+    <title>Task Commander</title>
   </head>
 
   <body>
-    <header class="container-fluid">
+    <header class="container-fluid bg-dark">
       <div class="row m-3">
-        <div class="col text-center">
+        <div class="col text-center text-light">
           <h1>Task Commander</h1>
 
           </div>
       </div>
     </header>
     <main class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <form onsubmit="app.listController.newList(event)">
-            <input type="text" name="title" id="title" aria-describedby="title"
-            placeholder="Title..." required>
-            <button type="submit" class="btn btn-secondary">Submit</button>
-          </form>
-         </div>
-      </div>
+      <div class="row d-flex justify-content center">
+        <div class="col text-center">
+          <form  class="d-flex justify-content-center" onsubmit="app.listController.newList(event)">
+            <input class="text-center mt-2 form-control w-25" type="text" name="title" id="title" aria-describedby="title"
+            placeholder="List Name..." required>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col text-center">
+              <label for="listColor">List Color:</label>
+              <input type="color" id="color" name="listColor"
+                     value="#e66465">
+          </div>
+        </div>
+        <div class="row m-0 p-0">
+          <div class="col text-center p-0">
+            <button type="submit" class="btn btn-secondary">Add List</button>
+          </div>
+        </div>
+      </form>
 
-      <div class="row ml-4 mt-3" id="lists">
+      <div class="row mx-0 mt-3 d-flex justify-content-center" id="lists">
          
         </div>
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid bg-dark">
       <div class="row">
-        <div class="col"></div>
+        <div class="col text-center text-light">
+          <p class="my-4">Created by Jacob Grow</p>
+        </div>
       </div>
     </footer>
     <script src="app/main.js" type="module"></script>

@@ -12,3 +12,7 @@ main{
 .action {
   cursor: pointer
 }
+
+.list-height{
+  min-height: 100px;
+}

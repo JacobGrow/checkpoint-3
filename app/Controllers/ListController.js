@@ -24,6 +24,7 @@ export default class ListController {
     event.preventDefault();
     let formData = event.target
     let rawList = {
+      color: event.target.color.value,
       title: formData.title.value
     }
     formData.reset();
